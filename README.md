@@ -7,6 +7,7 @@ This is a Django app using Django REST Framework.
 ## Native Application Development
 
 * Install [Python](https://www.python.org/downloads/)
+
 Running Django applications has been simplified with a `manage.py` file to avoid dealing with configuring environment variables to run your app. From your project root, you can download the project dependencies with:
 
 ```bash
