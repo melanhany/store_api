@@ -12,6 +12,8 @@ drf-nested-routers = "*"
 django-filter = "*"
 environ = "*"
 django-environ = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 
