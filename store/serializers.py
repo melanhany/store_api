@@ -124,6 +124,7 @@ class CreateOrderSerializer(serializers.Serializer):
 
             Cart.objects.filter(pk=cart_id).delete()
 
+            return order
 class OrderSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     items = OrderItemSerializer(many=True, read_only=True)
