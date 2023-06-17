@@ -28,7 +28,8 @@ class ProductViewSet(ModelViewSet):
 
     def destroy(self, request, *args, **kwargs):
         if OrderItem.objects.filter(product_id=kwargs['pk']).count() > 0:
-            return Response(status=status.HTTP_405_METHOD_NOT_ALLOWED)
+            return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+
         return super().destroy(request, *args, **kwargs)
 
 class CollectionViewSet(ModelViewSet):
